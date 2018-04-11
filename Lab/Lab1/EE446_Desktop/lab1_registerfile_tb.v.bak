@@ -1,0 +1,43 @@
+module lab1_registerfile_tb 
+	(#parameter W = 3) ();
+	
+	reg we,clk,reset;
+	reg [1:0] sel1,sel2,sel_dest;
+	reg [W-1:0] in;
+	wire [W-1:0] out1,out2;
+	
+	reg [16:0] mem [6:0];
+	
+	lab1_registerfile DUT (we, clk, reset,in,sel1,sel2,sel_dest,out1,out2);
+	
+	integer i,j;
+	
+	initial begin
+		clk=0;
+		$readmemb("C:/Users/AhmetSalih/Desktop/EE446_Desktop/test_vectors/lab1_registerfile_tb_vector.txt" , mem);
+		#1000;
+	end
+	always @* begin
+			for(j=0;j<100;j=j+1) begin
+				clk = clk ^ 1'b1;
+				#5;
+				//For now the frequency is too high but it's just for simulation
+			end
+	end
+	always @*
+	begin
+			for(i=0;i<7;i=i+1) begin
+			we = mem[i][16];
+			reset = mem[i][15];
+			in = mem[i][14:12];
+			sel1 = mem[i][11:10];
+			sel2 = mem[i][9:8];
+			sel_dest = mem[i][7:6];
+			#10;
+			if({out1,out2} == mem[i][5:0])	
+				$display ("No Error in %1d th row", i+1);
+			else
+				$display ("Error in %1d th row", i+1);
+			end
+	end
+endmodule

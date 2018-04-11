@@ -1,0 +1,248 @@
+|lab1_registerfile
+we => SYNTHESIZED_WIRE_18.IN1
+we => SYNTHESIZED_WIRE_19.IN1
+we => SYNTHESIZED_WIRE_0.IN1
+we => SYNTHESIZED_WIRE_1.IN1
+clk => clk.IN4
+reset => reset.IN4
+in[0] => in[0].IN4
+in[1] => in[1].IN4
+in[2] => in[2].IN4
+in[3] => in[3].IN4
+sel1[0] => sel1[0].IN2
+sel1[1] => sel1[1].IN1
+sel2[0] => sel2[0].IN2
+sel2[1] => sel2[1].IN1
+sel_dest[0] => sel_dest[0].IN1
+sel_dest[1] => sel_dest[1].IN1
+out1[0] << Mux2to1:b2v_inst4.out
+out1[1] << Mux2to1:b2v_inst4.out
+out1[2] << Mux2to1:b2v_inst4.out
+out1[3] << Mux2to1:b2v_inst4.out
+out2[0] << Mux2to1:b2v_inst6.out
+out2[1] << Mux2to1:b2v_inst6.out
+out2[2] << Mux2to1:b2v_inst6.out
+out2[3] << Mux2to1:b2v_inst6.out
+
+
+|lab1_registerfile|Decoder2to4:b2v_inst
+input0 => o1.IN0
+input0 => o3.IN0
+input0 => o0.IN0
+input0 => o2.IN0
+input1 => o2.IN1
+input1 => o3.IN1
+input1 => o0.IN1
+input1 => o1.IN1
+o0 <= o0.DB_MAX_OUTPUT_PORT_TYPE
+o1 <= o1.DB_MAX_OUTPUT_PORT_TYPE
+o2 <= o2.DB_MAX_OUTPUT_PORT_TYPE
+o3 <= o3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Reg_WE:b2v_inst10
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+data[0] => out.DATAB
+data[1] => out.DATAB
+data[2] => out.DATAB
+data[3] => out.DATAB
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Reg_WE:b2v_inst11
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+data[0] => out.DATAB
+data[1] => out.DATAB
+data[2] => out.DATAB
+data[3] => out.DATAB
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Mux2to1:b2v_inst2
+i0[0] => out.DATAA
+i0[1] => out.DATAA
+i0[2] => out.DATAA
+i0[3] => out.DATAA
+i1[0] => out.DATAB
+i1[1] => out.DATAB
+i1[2] => out.DATAB
+i1[3] => out.DATAB
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Mux2to1:b2v_inst3
+i0[0] => out.DATAA
+i0[1] => out.DATAA
+i0[2] => out.DATAA
+i0[3] => out.DATAA
+i1[0] => out.DATAB
+i1[1] => out.DATAB
+i1[2] => out.DATAB
+i1[3] => out.DATAB
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Mux2to1:b2v_inst4
+i0[0] => out.DATAA
+i0[1] => out.DATAA
+i0[2] => out.DATAA
+i0[3] => out.DATAA
+i1[0] => out.DATAB
+i1[1] => out.DATAB
+i1[2] => out.DATAB
+i1[3] => out.DATAB
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Mux2to1:b2v_inst5
+i0[0] => out.DATAA
+i0[1] => out.DATAA
+i0[2] => out.DATAA
+i0[3] => out.DATAA
+i1[0] => out.DATAB
+i1[1] => out.DATAB
+i1[2] => out.DATAB
+i1[3] => out.DATAB
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Mux2to1:b2v_inst6
+i0[0] => out.DATAA
+i0[1] => out.DATAA
+i0[2] => out.DATAA
+i0[3] => out.DATAA
+i1[0] => out.DATAB
+i1[1] => out.DATAB
+i1[2] => out.DATAB
+i1[3] => out.DATAB
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Mux2to1:b2v_inst7
+i0[0] => out.DATAA
+i0[1] => out.DATAA
+i0[2] => out.DATAA
+i0[3] => out.DATAA
+i1[0] => out.DATAB
+i1[1] => out.DATAB
+i1[2] => out.DATAB
+i1[3] => out.DATAB
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Reg_WE:b2v_inst8
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+data[0] => out.DATAB
+data[1] => out.DATAB
+data[2] => out.DATAB
+data[3] => out.DATAB
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1_registerfile|Reg_WE:b2v_inst9
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+reset => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+we => out.OUTPUTSELECT
+data[0] => out.DATAB
+data[1] => out.DATAB
+data[2] => out.DATAB
+data[3] => out.DATAB
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

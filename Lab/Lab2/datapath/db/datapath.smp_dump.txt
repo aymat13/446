@@ -1,0 +1,17 @@
+
+State Machine - |lab2|Controller:inst|state
+Name state.COMPLEMENT1 state.COMPLEMENT0 state.THE_END state.LOADING state.MUL_ASR state.MUL_START state.MUL state.BIC state.EXOR state.OR state.AND state.SUB state.ADD state.CLEAR 
+state.CLEAR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ADD 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.SUB 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.AND 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.OR 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.EXOR 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.BIC 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.MUL 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.MUL_START 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.MUL_ASR 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.LOADING 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.THE_END 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.COMPLEMENT0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.COMPLEMENT1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

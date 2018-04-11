@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Mar 30 02:45:11 2018
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : reg_file
+Top-level Entity Name : lab1_registerfile
+Family : Cyclone IV E
+Total logic elements : 36
+    Total combinational functions : 24
+    Dedicated logic registers : 16
+Total registers : 16
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

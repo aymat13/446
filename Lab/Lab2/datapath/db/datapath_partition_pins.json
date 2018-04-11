@@ -1,0 +1,169 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ERR",
+					"strict" : false
+				},
+				{
+					"name" : "R0_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "R0_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R0_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LOAD",
+					"strict" : false
+				},
+				{
+					"name" : "COMP",
+					"strict" : false
+				},
+				{
+					"name" : "CLR",
+					"strict" : false
+				},
+				{
+					"name" : "ALP_op[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALP_op[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALP_op[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

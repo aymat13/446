@@ -1,0 +1,35 @@
+module lab2_tb ();
+
+	reg	clk;
+	reg	LOAD;
+	reg	COMP;
+	reg	CLR;
+	reg	[2:0] ALP_op;
+	reg	[7:0] R0_in;
+	reg	[7:0] R1_in;
+	wire	ERR;
+	wire	[7:0] R0_out;
+	wire	[7:0] R1_out;
+ 
+	lab2 DUT(clk,LOAD,COMP,CLR,ALP_op,R0_in,R1_in,ERR,R0_out,R1_out);
+ 	
+	integer j;
+	initial begin
+		clk=0;
+		LOAD=1;
+		COMP=1;
+		CLR=0;
+		R0_in = 8'h80;
+		R1_in = 8'h80;
+		ALP_op=3'b010;
+		#1000;
+	end
+	always @* begin
+			for(j=0;j<100;j=j+1) begin
+				clk = clk ^ 1'b1;
+				#5;
+				//For now the frequency is too high but it's just for simulation
+			end
+	end
+	
+endmodule
