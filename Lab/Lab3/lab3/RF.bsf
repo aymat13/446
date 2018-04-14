@@ -1,0 +1,93 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 304 224)
+	(text "RF" (rect 5 0 23 16)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 142 41 156)(font "Arial" ))
+	(port
+		(pt 128 0)
+		(input)
+		(text "WE3" (rect 0 0 28 16)(font "Arial" (font_size 8)))
+		(text "WE3" (rect 120 16 136 44)(font "Arial" (font_size 8))(vertical))
+		(line (pt 128 0)(pt 128 16))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "WD3[31..0]" (rect 0 0 94 16)(font "Arial" (font_size 8)))
+		(text "WD3[31..0]" (rect 21 107 115 123)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 88 0)
+		(input)
+		(text "clk" (rect 0 0 28 16)(font "Arial" (font_size 8)))
+		(text "clk" (rect 80 8 96 36)(font "Arial" (font_size 8))(vertical))
+		(line (pt 88 0)(pt 88 16))
+	)
+	(port
+		(pt 112 160)
+		(input)
+		(text "reset" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "reset" (rect 104 87 120 134)(font "Arial" (font_size 8))(vertical))
+		(line (pt 112 160)(pt 112 144))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "A3[3..0]" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "A3[3..0]" (rect 21 75 96 91)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "A1[3..0]" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "A1[3..0]" (rect 21 35 96 51)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40)(line_width 3))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "A2[3..0]" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "A2[3..0]" (rect 21 51 96 67)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56)(line_width 3))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "RD1[31..0]" (rect 0 0 94 16)(font "Arial" (font_size 8)))
+		(text "RD1[31..0]" (rect 175 40 269 56)(font "Arial" (font_size 8)))
+		(line (pt 240 48)(pt 224 48)(line_width 3))
+	)
+	(port
+		(pt 240 112)
+		(output)
+		(text "RD2[31..0]" (rect 0 0 94 16)(font "Arial" (font_size 8)))
+		(text "RD2[31..0]" (rect 175 104 269 120)(font "Arial" (font_size 8)))
+		(line (pt 240 112)(pt 224 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 224 144))
+	)
+)

@@ -1,0 +1,142 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 376 240)
+	(text "datapath" (rect 5 0 80 16)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 206 41 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "PCsrc" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "PCsrc" (rect 21 27 68 43)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "ALUControl[2..0]" (rect 0 0 151 16)(font "Arial" (font_size 8)))
+		(text "ALUControl[2..0]" (rect 21 43 172 59)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "MemtoReg[1..0]" (rect 0 0 132 16)(font "Arial" (font_size 8)))
+		(text "MemtoReg[1..0]" (rect 21 59 153 75)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "RegSrc" (rect 0 0 56 16)(font "Arial" (font_size 8)))
+		(text "RegSrc" (rect 21 75 77 91)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "RegWrite" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "RegWrite" (rect 21 91 96 107)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "ALUSrc" (rect 0 0 56 16)(font "Arial" (font_size 8)))
+		(text "ALUSrc" (rect 21 107 77 123)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Shift_LR" (rect 0 0 75 16)(font "Arial" (font_size 8)))
+		(text "Shift_LR" (rect 21 123 96 139)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "clk" (rect 0 0 28 16)(font "Arial" (font_size 8)))
+		(text "clk" (rect 21 139 49 155)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "reset" (rect 0 0 47 16)(font "Arial" (font_size 8)))
+		(text "reset" (rect 21 155 68 171)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "Instr[31..0]" (rect 0 0 113 16)(font "Arial" (font_size 8)))
+		(text "Instr[31..0]" (rect 21 171 134 187)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "ReadData[31..0]" (rect 0 0 141 16)(font "Arial" (font_size 8)))
+		(text "ReadData[31..0]" (rect 21 187 162 203)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
+	)
+	(port
+		(pt 360 32)
+		(output)
+		(text "WriteData[31..0]" (rect 0 0 151 16)(font "Arial" (font_size 8)))
+		(text "WriteData[31..0]" (rect 188 27 339 43)(font "Arial" (font_size 8)))
+		(line (pt 360 32)(pt 344 32)(line_width 3))
+	)
+	(port
+		(pt 360 48)
+		(output)
+		(text "Z" (rect 0 0 9 16)(font "Arial" (font_size 8)))
+		(text "Z" (rect 330 43 339 59)(font "Arial" (font_size 8)))
+		(line (pt 360 48)(pt 344 48))
+	)
+	(port
+		(pt 360 64)
+		(output)
+		(text "N" (rect 0 0 9 16)(font "Arial" (font_size 8)))
+		(text "N" (rect 330 59 339 75)(font "Arial" (font_size 8)))
+		(line (pt 360 64)(pt 344 64))
+	)
+	(port
+		(pt 360 80)
+		(output)
+		(text "OVF" (rect 0 0 28 16)(font "Arial" (font_size 8)))
+		(text "OVF" (rect 311 75 339 91)(font "Arial" (font_size 8)))
+		(line (pt 360 80)(pt 344 80))
+	)
+	(port
+		(pt 360 96)
+		(output)
+		(text "CO" (rect 0 0 18 16)(font "Arial" (font_size 8)))
+		(text "CO" (rect 321 91 339 107)(font "Arial" (font_size 8)))
+		(line (pt 360 96)(pt 344 96))
+	)
+	(drawing
+		(rectangle (rect 16 16 344 208))
+	)
+)

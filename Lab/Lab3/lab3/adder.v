@@ -1,0 +1,5 @@
+module adder
+#(parameter W = 32) (input wire [W-1:0] a,b,
+							output wire [W-1:0] sum);
+		assign sum = a + b;
+endmodule

@@ -1,0 +1,6 @@
+module shifter( input wire[31:0] rb,rc,
+						input wire lr,
+						output wire[31:0] ra)
+						
+		
+endmodule
