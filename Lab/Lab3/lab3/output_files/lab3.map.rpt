@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3
-Sat Apr 14 14:37:43 2018
+Sat Apr 14 17:25:34 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -13,15 +13,25 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Reg_WE:flagreg1
- 12. Parameter Settings for User Entity Instance: Reg_WE:flagreg0
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: arm:inst3|controller:inst|Reg_WE:flagreg1
+ 13. Parameter Settings for User Entity Instance: arm:inst3|controller:inst|Reg_WE:flagreg0
+ 14. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|ALU:ALUU
+ 15. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|adder:PCp8
+ 16. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|adder:PCp4
+ 17. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Reg_Simple:PCreg
+ 18. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Mux2to1:PCmux
+ 19. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Mux4to1:resultmux
+ 20. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|constantValueGenerator:const4
+ 21. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Mux2to1:a2mux
+ 22. Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Mux2to1:srcbmux
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,16 +58,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 14 14:37:43 2018       ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 14 17:25:34 2018       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; lab3                                        ;
-; Top-level Entity Name              ; controller                                  ;
+; Top-level Entity Name              ; toplevel                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 24                                          ;
-;     Total combinational functions  ; 24                                          ;
-;     Dedicated logic registers      ; 4                                           ;
-; Total registers                    ; 4                                           ;
-; Total pins                         ; 41                                          ;
+; Total logic elements               ; 1                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 1                                           ;
+; Total registers                    ; 1                                           ;
+; Total pins                         ; 6                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -71,7 +81,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                                      ; controller         ; lab3               ;
+; Top-level entity name                                                      ; toplevel           ; lab3               ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,85 +167,658 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; Reg_WE.v                         ; yes             ; User Verilog HDL File  ; C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v     ;         ;
-; controller.v                     ; yes             ; User Verilog HDL File  ; C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
+; program.txt                      ; yes             ; User File                          ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/program.txt              ;         ;
+; Reg_WE.v                         ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v                 ;         ;
+; Reg_Simple.v                     ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v             ;         ;
+; Mux4to1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v                ;         ;
+; Mux2to1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v                ;         ;
+; constantValueGenerator.v         ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v                    ;         ;
+; datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/datapath.bdf             ;         ;
+; regfile.v                        ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v                ;         ;
+; adder.v                          ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v                  ;         ;
+; extend.v                         ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v                 ;         ;
+; dmem.v                           ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v                   ;         ;
+; imem.v                           ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v                   ;         ;
+; shifter.v                        ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v                ;         ;
+; toplevel.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/toplevel.bdf             ;         ;
+; controller.v                     ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v             ;         ;
+; arm.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/arm.bdf                  ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 24              ;
-;                                             ;                 ;
-; Total combinational functions               ; 24              ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 11              ;
-;     -- 3 input functions                    ; 7               ;
-;     -- <=2 input functions                  ; 6               ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 24              ;
-;     -- arithmetic mode                      ; 0               ;
-;                                             ;                 ;
-; Total registers                             ; 4               ;
-;     -- Dedicated logic registers            ; 4               ;
-;     -- I/O registers                        ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 41              ;
-;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; Instr[23]~input ;
-; Maximum fan-out                             ; 8               ;
-; Total fan-out                               ; 143             ;
-; Average fan-out                             ; 1.30            ;
-+---------------------------------------------+-----------------+
++------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                    ;
++---------------------------------------------+--------------------------------------------------+
+; Resource                                    ; Usage                                            ;
++---------------------------------------------+--------------------------------------------------+
+; Estimated Total logic elements              ; 1                                                ;
+;                                             ;                                                  ;
+; Total combinational functions               ; 0                                                ;
+; Logic element usage by number of LUT inputs ;                                                  ;
+;     -- 4 input functions                    ; 0                                                ;
+;     -- 3 input functions                    ; 0                                                ;
+;     -- <=2 input functions                  ; 0                                                ;
+;                                             ;                                                  ;
+; Logic elements by mode                      ;                                                  ;
+;     -- normal mode                          ; 0                                                ;
+;     -- arithmetic mode                      ; 0                                                ;
+;                                             ;                                                  ;
+; Total registers                             ; 1                                                ;
+;     -- Dedicated logic registers            ; 1                                                ;
+;     -- I/O registers                        ; 0                                                ;
+;                                             ;                                                  ;
+; I/O pins                                    ; 6                                                ;
+;                                             ;                                                  ;
+; Embedded Multiplier 9-bit elements          ; 0                                                ;
+;                                             ;                                                  ;
+; Maximum fan-out node                        ; arm:inst3|controller:inst|Reg_WE:flagreg1|out[0] ;
+; Maximum fan-out                             ; 1                                                ;
+; Total fan-out                               ; 9                                                ;
+; Average fan-out                             ; 0.69                                             ;
++---------------------------------------------+--------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
-; |controller                ; 24 (19)           ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |controller                 ; controller  ; work         ;
-;    |Reg_WE:flagreg0|       ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controller|Reg_WE:flagreg0 ; Reg_WE      ; work         ;
-;    |Reg_WE:flagreg1|       ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controller|Reg_WE:flagreg1 ; Reg_WE      ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+-------------+--------------+
+; |toplevel                  ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |toplevel                                           ; toplevel    ; work         ;
+;    |arm:inst3|             ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|arm:inst3                                 ; arm         ; work         ;
+;       |controller:inst|    ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|arm:inst3|controller:inst                 ; controller  ; work         ;
+;          |Reg_WE:flagreg1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|arm:inst3|controller:inst|Reg_WE:flagreg1 ; Reg_WE      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; LR$latch                                           ; LR                  ; yes                    ;
-; RegWrite$latch                                     ; Equal1              ; yes                    ;
-; NoWrite                                            ; NoWrite             ; yes                    ;
-; FlagWrite                                          ; WideOr0             ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++------------------------------------------------------+----------------------------------------+
+; Register name                                        ; Reason for Removal                     ;
++------------------------------------------------------+----------------------------------------+
+; arm:inst3|datapath:inst1|Reg_Simple:PCreg|out[0,1]   ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~96            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~97            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~98            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~99            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~100           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~101           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~102           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~103           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~104           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~105           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~106           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~107           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~108           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~109           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~110           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~111           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~112           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~113           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~114           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~115           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~116           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~117           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~118           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~119           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~120           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~121           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~122           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~123           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~124           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~125           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~126           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~127           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~128           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~129           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~130           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~131           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~132           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~133           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~134           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~135           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~136           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~137           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~138           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~139           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~140           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~141           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~142           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~143           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~144           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~145           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~146           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~147           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~148           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~149           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~150           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~151           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~152           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~153           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~154           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~155           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~156           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~157           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~158           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~159           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~160           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~161           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~162           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~163           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~164           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~165           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~166           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~167           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~168           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~169           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~170           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~171           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~172           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~173           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~174           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~175           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~176           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~177           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~178           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~179           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~180           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~181           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~182           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~183           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~184           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~185           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~186           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~187           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~188           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~189           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~190           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~191           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~192           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~193           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~194           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~195           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~196           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~197           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~198           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~199           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~200           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~201           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~202           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~203           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~204           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~205           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~206           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~207           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~208           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~209           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~210           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~211           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~212           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~213           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~214           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~215           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~216           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~217           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~218           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~219           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~220           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~221           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~222           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~223           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~224           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~225           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~226           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~227           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~228           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~229           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~230           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~231           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~232           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~233           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~234           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~235           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~236           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~237           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~238           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~239           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~240           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~241           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~242           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~243           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~244           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~245           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~246           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~247           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~248           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~249           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~250           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~251           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~252           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~253           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~254           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~255           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~288           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~289           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~290           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~291           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~292           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~293           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~294           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~295           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~296           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~297           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~298           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~299           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~300           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~301           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~302           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~303           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~304           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~305           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~306           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~307           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~308           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~309           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~310           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~311           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~312           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~313           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~314           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~315           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~316           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~317           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~318           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~319           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~352           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~353           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~354           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~355           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~356           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~357           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~358           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~359           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~360           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~361           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~362           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~363           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~364           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~365           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~366           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~367           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~368           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~369           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~370           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~371           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~372           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~373           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~374           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~375           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~376           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~377           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~378           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~379           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~380           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~381           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~382           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~383           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~384           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~385           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~386           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~387           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~388           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~389           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~390           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~391           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~392           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~393           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~394           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~395           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~396           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~397           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~398           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~399           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~400           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~401           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~402           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~403           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~404           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~405           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~406           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~407           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~408           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~409           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~410           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~411           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~412           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~413           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~414           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~415           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~416           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~417           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~418           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~419           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~420           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~421           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~422           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~423           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~424           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~425           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~426           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~427           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~428           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~429           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~430           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~431           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~432           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~433           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~434           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~435           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~436           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~437           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~438           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~439           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~440           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~441           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~442           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~443           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~444           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~445           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~446           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~447           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~448           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~449           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~450           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~451           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~452           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~453           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~454           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~455           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~456           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~457           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~458           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~459           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~460           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~461           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~462           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~463           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~464           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~465           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~466           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~467           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~468           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~469           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~470           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~471           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~472           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~473           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~474           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~475           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~476           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~477           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~478           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~479           ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~287           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~351           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~286           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~350           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~285           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~349           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~284           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~348           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~283           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~347           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~282           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~346           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~281           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~345           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~280           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~344           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~279           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~343           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~278           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~342           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~277           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~341           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~276           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~340           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~275           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~339           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~274           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~338           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~273           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~337           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~272           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~336           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~271           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~335           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~270           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~334           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~269           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~333           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~268           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~332           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~267           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~331           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~266           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~330           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~265           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~329           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~264           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~328           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~263           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~327           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~262           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~326           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~261           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~325           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~260           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~324           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~259           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~323           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~258           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~322           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~257           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~321           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~256           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~320           ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~63            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~62            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~61            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~60            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~59            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~58            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~57            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~56            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~55            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~54            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~53            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~52            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~51            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~50            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~49            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~48            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~47            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~46            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~45            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~44            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~43            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~42            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~41            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~40            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~39            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~38            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~37            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~36            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~35            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~34            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~33            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~32            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~95            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~94            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~93            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~92            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~91            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~90            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~89            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~88            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~87            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~86            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~85            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~84            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~83            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~82            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~81            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~80            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~79            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~78            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~77            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~76            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~75            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~74            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~73            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~72            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~71            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~70            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~69            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~68            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~67            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~66            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~65            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~64            ; Lost fanout                            ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~0             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~1             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~2             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~3             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~4             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~5             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~6             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~7             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~8             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~9             ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~10            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~11            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~12            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~13            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~14            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~15            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~16            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~17            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~18            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~19            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~20            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~21            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~22            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~23            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~24            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~25            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~26            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~27            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~28            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~29            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~30            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~31            ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|controller:inst|Reg_WE:flagreg0|out[1]     ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|controller:inst|Reg_WE:flagreg1|out[1]     ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|controller:inst|Reg_WE:flagreg0|out[0]     ; Stuck at GND due to stuck port data_in ;
+; arm:inst3|datapath:inst1|Reg_Simple:PCreg|out[2..31] ; Lost fanout                            ;
+; Total Number of Removed Registers = 515              ;                                        ;
++------------------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                ;
++--------------------------------------------+---------------------------+---------------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register            ;
++--------------------------------------------+---------------------------+---------------------------------------------------+
+; arm:inst3|datapath:inst1|regfile:RF|rf~287 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~65,        ;
+;                                            ; due to stuck port data_in ; arm:inst3|datapath:inst1|regfile:RF|rf~64,        ;
+;                                            ;                           ; arm:inst3|datapath:inst1|regfile:RF|rf~31,        ;
+;                                            ;                           ; arm:inst3|controller:inst|Reg_WE:flagreg1|out[1], ;
+;                                            ;                           ; arm:inst3|datapath:inst1|Reg_Simple:PCreg|out[2], ;
+;                                            ;                           ; arm:inst3|datapath:inst1|Reg_Simple:PCreg|out[3], ;
+;                                            ;                           ; arm:inst3|datapath:inst1|Reg_Simple:PCreg|out[4]  ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~256 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~0,         ;
+;                                            ; due to stuck port data_in ; arm:inst3|datapath:inst1|Reg_Simple:PCreg|out[5]  ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~285 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~29         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~284 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~28         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~283 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~27         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~282 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~26         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~281 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~25         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~280 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~24         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~279 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~23         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~278 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~22         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~277 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~21         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~276 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~20         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~275 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~19         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~274 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~18         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~273 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~17         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~272 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~16         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~271 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~15         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~270 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~14         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~269 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~13         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~268 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~12         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~267 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~11         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~266 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~10         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~265 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~9          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~264 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~8          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~263 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~7          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~262 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~6          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~261 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~5          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~260 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~4          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~259 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~3          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~258 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~2          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~257 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~1          ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~286 ; Stuck at GND              ; arm:inst3|datapath:inst1|regfile:RF|rf~30         ;
+;                                            ; due to stuck port data_in ;                                                   ;
+; arm:inst3|datapath:inst1|regfile:RF|rf~63  ; Stuck at GND              ; arm:inst3|controller:inst|Reg_WE:flagreg0|out[0]  ;
+;                                            ; due to stuck port data_in ;                                                   ;
++--------------------------------------------+---------------------------+---------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -243,42 +826,134 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 1     ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |controller|Reg_WE:flagreg0|out[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|arm:inst3|controller:inst|Reg_WE:flagreg0|out[1] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |toplevel|arm:inst3|datapath:inst1|ALU:ALUU|Mux28          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Reg_WE:flagreg1 ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; W              ; 2     ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|controller:inst|Reg_WE:flagreg1 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; W              ; 2     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Reg_WE:flagreg0 ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; W              ; 2     ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|controller:inst|Reg_WE:flagreg0 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; W              ; 2     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|ALU:ALUU ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|adder:PCp8 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|adder:PCp4 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Reg_Simple:PCreg ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Mux2to1:PCmux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Mux4to1:resultmux ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|constantValueGenerator:const4 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                                             ;
+; C              ; 4     ; Unsigned Integer                                                           ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Mux2to1:a2mux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; W              ; 4     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:inst3|datapath:inst1|Mux2to1:srcbmux ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -287,19 +962,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 41                          ;
-; cycloneiii_ff         ; 4                           ;
-;     ENA               ; 4                           ;
-; cycloneiii_lcell_comb ; 26                          ;
-;     normal            ; 26                          ;
+; boundary_port         ; 6                           ;
+; cycloneiii_ff         ; 1                           ;
+;     SCLR              ; 1                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 11                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.75                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -318,97 +989,108 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sat Apr 14 14:37:19 2018
+    Info: Processing started: Sat Apr 14 17:25:27 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3 -c lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file reg_we.v
-    Info (12023): Found entity 1: Reg_WE File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v Line: 1
+    Info (12023): Found entity 1: Reg_WE File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_simple.v
-    Info (12023): Found entity 1: Reg_Simple File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v Line: 1
+    Info (12023): Found entity 1: Reg_Simple File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_shift.v
-    Info (12023): Found entity 1: Reg_Shift File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Shift.v Line: 1
+    Info (12023): Found entity 1: Reg_Shift File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Shift.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4to1.v
-    Info (12023): Found entity 1: Mux4to1 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v Line: 1
+    Info (12023): Found entity 1: Mux4to1 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
-    Info (12023): Found entity 1: Mux2to1 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v Line: 1
+    Info (12023): Found entity 1: Mux2to1 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder2to4.v
-    Info (12023): Found entity 1: Decoder2to4 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Decoder2to4.v Line: 1
+    Info (12023): Found entity 1: Decoder2to4 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Decoder2to4.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file constantvaluegenerator.v
-    Info (12023): Found entity 1: constantValueGenerator File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v Line: 1
+    Info (12023): Found entity 1: constantValueGenerator File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder4to16.v
-    Info (12023): Found entity 1: Decoder4to16 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Decoder4to16.v Line: 1
+    Info (12023): Found entity 1: Decoder4to16 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Decoder4to16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rf.bdf
     Info (12023): Found entity 1: RF
 Info (12021): Found 1 design units, including 1 entities, in source file mux16to1.v
-    Info (12023): Found entity 1: Mux16to1 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Mux16to1.v Line: 1
+    Info (12023): Found entity 1: Mux16to1 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux16to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.bdf
     Info (12023): Found entity 1: datapath
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regfile File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v Line: 1
+    Info (12023): Found entity 1: regfile File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.v
-    Info (12023): Found entity 1: adder File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/adder.v Line: 1
+    Info (12023): Found entity 1: adder File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extend.v
-    Info (12023): Found entity 1: extend File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/extend.v Line: 1
+    Info (12023): Found entity 1: extend File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file dmem.v
-    Info (12023): Found entity 1: dmem File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v Line: 1
+    Info (12023): Found entity 1: dmem File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem.v
-    Info (12023): Found entity 1: imem File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 1
+    Info (12023): Found entity 1: imem File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
-    Info (12023): Found entity 1: shifter File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v Line: 1
+    Info (12023): Found entity 1: shifter File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
     Info (12023): Found entity 1: toplevel
 Info (12021): Found 1 design units, including 1 entities, in source file controller.v
-    Info (12023): Found entity 1: controller File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 1
-Info (12127): Elaborating entity "controller" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "NoWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
-Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "FlagWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
-Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "LR", which holds its previous value in one or more paths through the always construct File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
-Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "RegWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
-Info (10041): Inferred latch for "RegWrite" at controller.v(89) File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
-Info (10041): Inferred latch for "LR" at controller.v(89) File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
-Info (10041): Inferred latch for "FlagWrite" at controller.v(89) File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
-Info (10041): Inferred latch for "NoWrite" at controller.v(89) File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
-Info (12128): Elaborating entity "Reg_WE" for hierarchy "Reg_WE:flagreg1" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 21
-Warning (13012): Latch LR$latch has unsafe behavior File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr[21] File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-Warning (13012): Latch NoWrite has unsafe behavior File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr[21] File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-Warning (13012): Latch FlagWrite has unsafe behavior File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr[21] File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Info (12023): Found entity 1: controller File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file arm.bdf
+    Info (12023): Found entity 1: arm
+Info (12127): Elaborating entity "toplevel" for the top level hierarchy
+Info (12128): Elaborating entity "arm" for hierarchy "arm:inst3"
+Info (12128): Elaborating entity "controller" for hierarchy "arm:inst3|controller:inst"
+Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "NoWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
+Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "FlagWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
+Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "LR", which holds its previous value in one or more paths through the always construct File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
+Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "RegWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
+Info (10041): Inferred latch for "RegWrite" at controller.v(89) File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+Info (10041): Inferred latch for "LR" at controller.v(89) File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+Info (10041): Inferred latch for "FlagWrite" at controller.v(89) File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+Info (10041): Inferred latch for "NoWrite" at controller.v(89) File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+Info (12128): Elaborating entity "Reg_WE" for hierarchy "arm:inst3|controller:inst|Reg_WE:flagreg1" File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 21
+Info (12128): Elaborating entity "datapath" for hierarchy "arm:inst3|datapath:inst1"
+Info (12128): Elaborating entity "ALU" for hierarchy "arm:inst3|datapath:inst1|ALU:ALUU"
+Info (12128): Elaborating entity "regfile" for hierarchy "arm:inst3|datapath:inst1|regfile:RF"
+Info (12128): Elaborating entity "adder" for hierarchy "arm:inst3|datapath:inst1|adder:PCp8"
+Info (12128): Elaborating entity "Reg_Simple" for hierarchy "arm:inst3|datapath:inst1|Reg_Simple:PCreg"
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "arm:inst3|datapath:inst1|Mux2to1:PCmux"
+Info (12128): Elaborating entity "Mux4to1" for hierarchy "arm:inst3|datapath:inst1|Mux4to1:resultmux"
+Info (12128): Elaborating entity "shifter" for hierarchy "arm:inst3|datapath:inst1|shifter:inst"
+Info (12128): Elaborating entity "constantValueGenerator" for hierarchy "arm:inst3|datapath:inst1|constantValueGenerator:const4"
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "arm:inst3|datapath:inst1|Mux2to1:a2mux"
+Info (12128): Elaborating entity "extend" for hierarchy "arm:inst3|datapath:inst1|extend:ex"
+Info (12128): Elaborating entity "imem" for hierarchy "imem:inst"
+Warning (10850): Verilog HDL warning at imem.v(6): number of words (1) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 6
+Warning (10030): Net "RAM.data_a" at imem.v(3) has no driver or initial value, using a default initial value '0' File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 3
+Warning (10030): Net "RAM.waddr_a" at imem.v(3) has no driver or initial value, using a default initial value '0' File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 3
+Warning (10030): Net "RAM.we_a" at imem.v(3) has no driver or initial value, using a default initial value '0' File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 3
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:inst2"
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "arm:inst3|datapath:inst1|regfile:RF|rf" is uninferred due to asynchronous read logic File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v Line: 7
+    Info (276007): RAM logic "dmem:inst2|RAM" is uninferred due to asynchronous read logic File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v Line: 5
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/db/lab3.ram0_imem_37c714.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (14026): LATCH primitive "arm:inst3|controller:inst|RegWrite" is permanently enabled File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 5
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "MemtoReg[1]" is stuck at GND File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 6
-    Warning (13410): Pin "ALUControl[1]" is stuck at GND File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 8
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/output_files/lab3.map.smsg
+    Warning (13410): Pin "C" is stuck at GND
+    Warning (13410): Pin "N" is stuck at GND
+    Warning (13410): Pin "OVF" is stuck at GND
+Info (17049): 382 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/output_files/lab3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Instr[16]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-    Warning (15610): No output dependent on input pin "Instr[17]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-    Warning (15610): No output dependent on input pin "Instr[18]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-    Warning (15610): No output dependent on input pin "Instr[19]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-    Warning (15610): No output dependent on input pin "Instr[25]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-    Warning (15610): No output dependent on input pin "Instr[28]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-    Warning (15610): No output dependent on input pin "Instr[29]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-    Warning (15610): No output dependent on input pin "Instr[30]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-    Warning (15610): No output dependent on input pin "Instr[31]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
-Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 26 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 24 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 916 megabytes
-    Info: Processing ended: Sat Apr 14 14:37:43 2018
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:33
+Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 1 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 880 megabytes
+    Info: Processing ended: Sat Apr 14 17:25:34 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/output_files/lab3.map.smsg.
+The suppressed messages can be found in C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/output_files/lab3.map.smsg.
 
 
