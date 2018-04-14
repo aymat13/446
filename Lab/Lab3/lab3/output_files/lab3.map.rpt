@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3
-Sat Apr 14 12:59:00 2018
+Sat Apr 14 14:37:43 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -13,20 +13,15 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: ALU:ALUU
- 11. Parameter Settings for User Entity Instance: adder:PCp8
- 12. Parameter Settings for User Entity Instance: adder:PCp4
- 13. Parameter Settings for User Entity Instance: Reg_Simple:PCreg
- 14. Parameter Settings for User Entity Instance: Mux2to1:PCmux
- 15. Parameter Settings for User Entity Instance: Mux4to1:resultmux
- 16. Parameter Settings for User Entity Instance: constantValueGenerator:const4
- 17. Parameter Settings for User Entity Instance: Mux2to1:a2mux
- 18. Parameter Settings for User Entity Instance: Mux2to1:srcbmux
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Reg_WE:flagreg1
+ 12. Parameter Settings for User Entity Instance: Reg_WE:flagreg0
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -53,16 +48,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 14 12:59:00 2018       ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 14 14:37:43 2018       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; lab3                                        ;
-; Top-level Entity Name              ; datapath                                    ;
+; Top-level Entity Name              ; controller                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,143                                       ;
-;     Total combinational functions  ; 1,695                                       ;
-;     Dedicated logic registers      ; 512                                         ;
-; Total registers                    ; 512                                         ;
-; Total pins                         ; 176                                         ;
+; Total logic elements               ; 24                                          ;
+;     Total combinational functions  ; 24                                          ;
+;     Dedicated logic registers      ; 4                                           ;
+; Total registers                    ; 4                                           ;
+; Total pins                         ; 41                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -76,7 +71,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                                      ; datapath           ; lab3               ;
+; Top-level entity name                                                      ; controller         ; lab3               ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,7 +157,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -170,60 +165,51 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
-; Reg_Simple.v                     ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v             ;         ;
-; Mux4to1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v                ;         ;
-; Mux2to1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v                ;         ;
-; constantValueGenerator.v         ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v                    ;         ;
-; datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/datapath.bdf             ;         ;
-; regfile.v                        ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v                ;         ;
-; adder.v                          ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v                  ;         ;
-; extend.v                         ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v                 ;         ;
-; shifter.v                        ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v                ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+; Reg_WE.v                         ; yes             ; User Verilog HDL File  ; C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v     ;         ;
+; controller.v                     ; yes             ; User Verilog HDL File  ; C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 2,143     ;
-;                                             ;           ;
-; Total combinational functions               ; 1695      ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1181      ;
-;     -- 3 input functions                    ; 414       ;
-;     -- <=2 input functions                  ; 100       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1541      ;
-;     -- arithmetic mode                      ; 154       ;
-;                                             ;           ;
-; Total registers                             ; 512       ;
-;     -- Dedicated logic registers            ; 512       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 176       ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 512       ;
-; Total fan-out                               ; 7970      ;
-; Average fan-out                             ; 3.11      ;
-+---------------------------------------------+-----------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 24              ;
+;                                             ;                 ;
+; Total combinational functions               ; 24              ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 11              ;
+;     -- 3 input functions                    ; 7               ;
+;     -- <=2 input functions                  ; 6               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 24              ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 4               ;
+;     -- Dedicated logic registers            ; 4               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 41              ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; Instr[23]~input ;
+; Maximum fan-out                             ; 8               ;
+; Total fan-out                               ; 143             ;
+; Average fan-out                             ; 1.30            ;
++---------------------------------------------+-----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -231,18 +217,25 @@ agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
-; |datapath                  ; 1695 (0)          ; 512 (0)      ; 0           ; 0            ; 0       ; 0         ; 176  ; 0            ; |datapath                   ; datapath    ; work         ;
-;    |ALU:ALUU|              ; 407 (407)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUU          ; ALU         ; work         ;
-;    |Mux2to1:a2mux|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Mux2to1:a2mux     ; Mux2to1     ; work         ;
-;    |Mux2to1:srcbmux|       ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Mux2to1:srcbmux   ; Mux2to1     ; work         ;
-;    |Mux4to1:resultmux|     ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Mux4to1:resultmux ; Mux4to1     ; work         ;
-;    |Reg_Simple:PCreg|      ; 36 (36)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Reg_Simple:PCreg  ; Reg_Simple  ; work         ;
-;    |adder:PCp4|            ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|adder:PCp4        ; adder       ; work         ;
-;    |adder:PCp8|            ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|adder:PCp8        ; adder       ; work         ;
-;    |regfile:RF|            ; 737 (737)         ; 480 (480)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regfile:RF        ; regfile     ; work         ;
-;    |shifter:inst|          ; 199 (199)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|shifter:inst      ; shifter     ; work         ;
+; |controller                ; 24 (19)           ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |controller                 ; controller  ; work         ;
+;    |Reg_WE:flagreg0|       ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controller|Reg_WE:flagreg0 ; Reg_WE      ; work         ;
+;    |Reg_WE:flagreg1|       ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controller|Reg_WE:flagreg1 ; Reg_WE      ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; LR$latch                                           ; LR                  ; yes                    ;
+; RegWrite$latch                                     ; Equal1              ; yes                    ;
+; NoWrite                                            ; NoWrite             ; yes                    ;
+; FlagWrite                                          ; WideOr0             ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -250,12 +243,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 512   ;
-; Number of registers using Synchronous Clear  ; 30    ;
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 482   ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -265,109 +258,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |datapath|Reg_Simple:PCreg|out[1]  ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |datapath|Reg_Simple:PCreg|out[21] ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |datapath|ALU:ALUU|Mux34           ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 155 LEs              ; 0 LEs                  ; No         ; |datapath|ALU:ALUU|Mux10           ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |datapath|ALU:ALUU|Mux0            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; No         ; |datapath|Mux4to1:resultmux|Mux23  ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; No         ; |datapath|Mux4to1:resultmux|Mux13  ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |datapath|Mux4to1:resultmux|Mux24  ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |datapath|Mux4to1:resultmux|Mux7   ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |datapath|Mux4to1:resultmux|Mux28  ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |datapath|Mux4to1:resultmux|Mux3   ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |datapath|Mux4to1:resultmux|Mux30  ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |datapath|Mux4to1:resultmux|Mux1   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |controller|Reg_WE:flagreg0|out[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
-+-------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU:ALUU ;
-+----------------+-------+------------------------------+
-; Parameter Name ; Value ; Type                         ;
-+----------------+-------+------------------------------+
-; W              ; 32    ; Signed Integer               ;
-+----------------+-------+------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder:PCp8 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; W              ; 32    ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder:PCp4 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; W              ; 32    ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Reg_Simple:PCreg ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; W              ; 32    ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mux2to1:PCmux ;
-+----------------+-------+-----------------------------------+
-; Parameter Name ; Value ; Type                              ;
-+----------------+-------+-----------------------------------+
-; W              ; 32    ; Signed Integer                    ;
-+----------------+-------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mux4to1:resultmux ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; W              ; 32    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: constantValueGenerator:const4 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; W              ; 32    ; Signed Integer                                    ;
-; C              ; 4     ; Unsigned Integer                                  ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mux2to1:a2mux ;
-+----------------+-------+-----------------------------------+
-; Parameter Name ; Value ; Type                              ;
-+----------------+-------+-----------------------------------+
-; W              ; 4     ; Signed Integer                    ;
-+----------------+-------+-----------------------------------+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_WE:flagreg1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; W              ; 2     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mux2to1:srcbmux ;
+; Parameter Settings for User Entity Instance: Reg_WE:flagreg0 ;
 +----------------+-------+-------------------------------------+
 ; Parameter Name ; Value ; Type                                ;
 +----------------+-------+-------------------------------------+
-; W              ; 32    ; Signed Integer                      ;
+; W              ; 2     ; Signed Integer                      ;
 +----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -377,23 +287,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 176                         ;
-; cycloneiii_ff         ; 512                         ;
-;     ENA               ; 482                         ;
-;     SCLR              ; 30                          ;
-; cycloneiii_lcell_comb ; 1695                        ;
-;     arith             ; 154                         ;
-;         2 data inputs ; 58                          ;
-;         3 data inputs ; 96                          ;
-;     normal            ; 1541                        ;
-;         0 data inputs ; 3                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 37                          ;
-;         3 data inputs ; 318                         ;
-;         4 data inputs ; 1181                        ;
+; boundary_port         ; 41                          ;
+; cycloneiii_ff         ; 4                           ;
+;     ENA               ; 4                           ;
+; cycloneiii_lcell_comb ; 26                          ;
+;     normal            ; 26                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 11                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.80                       ;
-; Average LUT depth     ; 13.63                       ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -402,7 +308,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -412,83 +318,97 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sat Apr 14 12:58:49 2018
+    Info: Processing started: Sat Apr 14 14:37:19 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3 -c lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file reg_we.v
-    Info (12023): Found entity 1: Reg_WE File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v Line: 1
+    Info (12023): Found entity 1: Reg_WE File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_simple.v
-    Info (12023): Found entity 1: Reg_Simple File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v Line: 1
+    Info (12023): Found entity 1: Reg_Simple File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_shift.v
-    Info (12023): Found entity 1: Reg_Shift File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Shift.v Line: 1
+    Info (12023): Found entity 1: Reg_Shift File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Shift.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4to1.v
-    Info (12023): Found entity 1: Mux4to1 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v Line: 1
+    Info (12023): Found entity 1: Mux4to1 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
-    Info (12023): Found entity 1: Mux2to1 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v Line: 1
+    Info (12023): Found entity 1: Mux2to1 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder2to4.v
-    Info (12023): Found entity 1: Decoder2to4 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Decoder2to4.v Line: 1
+    Info (12023): Found entity 1: Decoder2to4 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Decoder2to4.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file constantvaluegenerator.v
-    Info (12023): Found entity 1: constantValueGenerator File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v Line: 1
+    Info (12023): Found entity 1: constantValueGenerator File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder4to16.v
-    Info (12023): Found entity 1: Decoder4to16 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Decoder4to16.v Line: 1
+    Info (12023): Found entity 1: Decoder4to16 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Decoder4to16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rf.bdf
     Info (12023): Found entity 1: RF
 Info (12021): Found 1 design units, including 1 entities, in source file mux16to1.v
-    Info (12023): Found entity 1: Mux16to1 File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux16to1.v Line: 1
+    Info (12023): Found entity 1: Mux16to1 File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/Mux16to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.bdf
     Info (12023): Found entity 1: datapath
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regfile File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v Line: 1
+    Info (12023): Found entity 1: regfile File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.v
-    Info (12023): Found entity 1: adder File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v Line: 1
+    Info (12023): Found entity 1: adder File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/adder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extend.v
-    Info (12023): Found entity 1: extend File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v Line: 1
+    Info (12023): Found entity 1: extend File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/extend.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file dmem.v
-    Info (12023): Found entity 1: dmem File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v Line: 1
+    Info (12023): Found entity 1: dmem File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem.v
-    Info (12023): Found entity 1: imem File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 1
+    Info (12023): Found entity 1: imem File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
-    Info (12023): Found entity 1: shifter File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v Line: 1
-Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUU"
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:RF"
-Info (12128): Elaborating entity "adder" for hierarchy "adder:PCp8"
-Info (12128): Elaborating entity "Reg_Simple" for hierarchy "Reg_Simple:PCreg"
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:PCmux"
-Info (12128): Elaborating entity "Mux4to1" for hierarchy "Mux4to1:resultmux"
-Info (12128): Elaborating entity "shifter" for hierarchy "shifter:inst"
-Info (12128): Elaborating entity "constantValueGenerator" for hierarchy "constantValueGenerator:const4"
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:a2mux"
-Info (12128): Elaborating entity "extend" for hierarchy "extend:ex"
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "regfile:RF|rf" is uninferred due to asynchronous read logic File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v Line: 7
+    Info (12023): Found entity 1: shifter File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
+    Info (12023): Found entity 1: toplevel
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: controller File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 1
+Info (12127): Elaborating entity "controller" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "NoWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
+Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "FlagWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
+Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "LR", which holds its previous value in one or more paths through the always construct File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
+Warning (10240): Verilog HDL Always Construct warning at controller.v(44): inferring latch(es) for variable "RegWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 44
+Info (10041): Inferred latch for "RegWrite" at controller.v(89) File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+Info (10041): Inferred latch for "LR" at controller.v(89) File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+Info (10041): Inferred latch for "FlagWrite" at controller.v(89) File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+Info (10041): Inferred latch for "NoWrite" at controller.v(89) File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+Info (12128): Elaborating entity "Reg_WE" for hierarchy "Reg_WE:flagreg1" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 21
+Warning (13012): Latch LR$latch has unsafe behavior File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr[21] File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+Warning (13012): Latch NoWrite has unsafe behavior File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr[21] File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+Warning (13012): Latch FlagWrite has unsafe behavior File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr[21] File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "MemtoReg[1]" is stuck at GND File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 6
+    Warning (13410): Pin "ALUControl[1]" is stuck at GND File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/output_files/lab3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Instr[31]"
-    Warning (15610): No output dependent on input pin "Instr[30]"
-    Warning (15610): No output dependent on input pin "Instr[29]"
-    Warning (15610): No output dependent on input pin "Instr[28]"
-    Warning (15610): No output dependent on input pin "Instr[27]"
-    Warning (15610): No output dependent on input pin "Instr[26]"
-    Warning (15610): No output dependent on input pin "Instr[25]"
-    Warning (15610): No output dependent on input pin "Instr[24]"
-    Warning (15610): No output dependent on input pin "Instr[23]"
-    Warning (15610): No output dependent on input pin "Instr[22]"
-    Warning (15610): No output dependent on input pin "Instr[21]"
-    Warning (15610): No output dependent on input pin "Instr[20]"
-Info (21057): Implemented 2351 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 76 input pins
-    Info (21059): Implemented 100 output pins
-    Info (21061): Implemented 2175 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 921 megabytes
-    Info: Processing ended: Sat Apr 14 12:59:00 2018
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Instr[16]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Warning (15610): No output dependent on input pin "Instr[17]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Warning (15610): No output dependent on input pin "Instr[18]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Warning (15610): No output dependent on input pin "Instr[19]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Warning (15610): No output dependent on input pin "Instr[25]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Warning (15610): No output dependent on input pin "Instr[28]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Warning (15610): No output dependent on input pin "Instr[29]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Warning (15610): No output dependent on input pin "Instr[30]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+    Warning (15610): No output dependent on input pin "Instr[31]" File: C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/controller.v Line: 2
+Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 26 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 24 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 916 megabytes
+    Info: Processing ended: Sat Apr 14 14:37:43 2018
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:33
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/aymat/Documents/GitHub/446/Lab/Lab3/lab3/output_files/lab3.map.smsg.
 
 
