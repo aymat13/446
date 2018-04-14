@@ -24,7 +24,7 @@ agreement for further details.
 	(input)
 	(rect -776 -664 -760 -496)
 	(text "INPUT" (rect 5 125 16 166)(font "Arial" (font_size 6))(vertical))
-	(text "PCsrc" (rect 2 5 16 47)(font "Arial" )(vertical))
+	(text "PCsrc" (rect 2 5 16 46)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -41,7 +41,7 @@ agreement for further details.
 	(input)
 	(rect -1184 -360 -1016 -344)
 	(text "INPUT" (rect 125 0 166 11)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 30 14)(font "Arial" ))
+	(text "clk" (rect 5 0 29 14)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -57,7 +57,7 @@ agreement for further details.
 	(input)
 	(rect -1184 -304 -1016 -288)
 	(text "INPUT" (rect 125 0 166 11)(font "Arial" (font_size 6)))
-	(text "reset" (rect 5 0 47 14)(font "Arial" ))
+	(text "reset" (rect 5 0 46 14)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,9 +71,9 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 384 -168 400 32)
+	(rect 384 -240 400 -40)
 	(text "INPUT" (rect 5 157 16 198)(font "Arial" (font_size 6))(vertical))
-	(text "Instr[31..0]" (rect 2 5 16 105)(font "Arial" )(vertical))
+	(text "Instr[31..0]" (rect 2 5 16 104)(font "Arial" )(vertical))
 	(pt 8 200)
 	(drawing
 		(line (pt 4 116)(pt 4 141))
@@ -90,7 +90,7 @@ agreement for further details.
 	(input)
 	(rect 480 -640 496 -472)
 	(text "INPUT" (rect 5 125 16 166)(font "Arial" (font_size 6))(vertical))
-	(text "RegSrc" (rect 2 5 16 55)(font "Arial" )(vertical))
+	(text "RegSrc" (rect 2 5 16 54)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -107,7 +107,7 @@ agreement for further details.
 	(input)
 	(rect 720 -632 736 -464)
 	(text "INPUT" (rect 5 125 16 166)(font "Arial" (font_size 6))(vertical))
-	(text "RegWrite" (rect 2 5 16 72)(font "Arial" )(vertical))
+	(text "RegWrite" (rect 2 5 16 71)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -124,7 +124,7 @@ agreement for further details.
 	(input)
 	(rect 1240 96 1464 112)
 	(text "INPUT" (rect 181 0 222 11)(font "Arial" (font_size 6)))
-	(text "ReadData[31..0]" (rect 5 0 129 14)(font "Arial" ))
+	(text "ReadData[31..0]" (rect 5 0 128 14)(font "Arial" ))
 	(pt 224 8)
 	(drawing
 		(line (pt 140 12)(pt 165 12))
@@ -140,7 +140,7 @@ agreement for further details.
 	(input)
 	(rect 944 -600 960 -432)
 	(text "INPUT" (rect 5 125 16 166)(font "Arial" (font_size 6))(vertical))
-	(text "ALUSrc" (rect 2 5 16 55)(font "Arial" )(vertical))
+	(text "ALUSrc" (rect 2 5 16 54)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -157,7 +157,7 @@ agreement for further details.
 	(input)
 	(rect 1160 -664 1176 -432)
 	(text "INPUT" (rect 5 189 16 230)(font "Arial" (font_size 6))(vertical))
-	(text "ALUControl[2..0]" (rect 2 5 16 138)(font "Arial" )(vertical))
+	(text "ALUControl[2..0]" (rect 2 5 16 137)(font "Arial" )(vertical))
 	(pt 8 232)
 	(drawing
 		(line (pt 4 148)(pt 4 173))
@@ -174,7 +174,7 @@ agreement for further details.
 	(input)
 	(rect 1624 -656 1640 -440)
 	(text "INPUT" (rect 5 173 16 214)(font "Arial" (font_size 6))(vertical))
-	(text "MemtoReg[1..0]" (rect 2 5 16 121)(font "Arial" )(vertical))
+	(text "MemtoReg[1..0]" (rect 2 5 16 120)(font "Arial" )(vertical))
 	(pt 8 216)
 	(drawing
 		(line (pt 4 132)(pt 4 157))
@@ -191,7 +191,7 @@ agreement for further details.
 	(input)
 	(rect 1232 -600 1248 -432)
 	(text "INPUT" (rect 5 125 16 166)(font "Arial" (font_size 6))(vertical))
-	(text "Shift_LR" (rect 2 5 16 72)(font "Arial" )(vertical))
+	(text "Shift_LR" (rect 2 5 16 71)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -287,6 +287,38 @@ agreement for further details.
 		(line (pt 4 78)(pt 8 82))
 	)
 	(rotate270)
+)
+(pin
+	(output)
+	(rect -40 184 136 200)
+	(text "OUTPUT" (rect 1 0 50 11)(font "Arial" (font_size 6)))
+	(text "PC[31..0]" (rect 90 0 164 14)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1736 120 1964 136)
+	(text "OUTPUT" (rect 1 0 50 11)(font "Arial" (font_size 6)))
+	(text "ALUResult[31..0]" (rect 90 0 222 14)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
 )
 (symbol
 	(rect -408 160 -216 272)
@@ -936,16 +968,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 392 32)
-	(pt 392 64)
-	(bus)
-)
-(connector
-	(pt 392 64)
-	(pt 392 80)
-	(bus)
-)
-(connector
 	(pt 392 80)
 	(pt 392 224)
 	(bus)
@@ -1000,11 +1022,6 @@ agreement for further details.
 (connector
 	(pt 632 184)
 	(pt 632 240)
-	(bus)
-)
-(connector
-	(pt 1392 192)
-	(pt 1648 192)
 	(bus)
 )
 (connector
@@ -1284,12 +1301,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "PC[31..0]" (rect -174 176 -100 190)(font "Arial" ))
-	(pt -216 192)
-	(pt -112 192)
-	(bus)
-)
-(connector
 	(text "PCPlus4[31..0]" (rect 114 432 229 446)(font "Arial" ))
 	(pt -792 448)
 	(pt 184 448)
@@ -1319,6 +1330,46 @@ agreement for further details.
 	(pt 392 416)
 	(bus)
 )
+(connector
+	(pt -112 192)
+	(pt -40 192)
+	(bus)
+)
+(connector
+	(pt -216 192)
+	(pt -112 192)
+	(bus)
+)
+(connector
+	(pt 392 64)
+	(pt 392 80)
+	(bus)
+)
+(connector
+	(pt 392 -40)
+	(pt 392 64)
+	(bus)
+)
+(connector
+	(pt 1512 192)
+	(pt 1512 128)
+	(bus)
+)
+(connector
+	(pt 1392 192)
+	(pt 1512 192)
+	(bus)
+)
+(connector
+	(pt 1512 192)
+	(pt 1648 192)
+	(bus)
+)
+(connector
+	(pt 1512 128)
+	(pt 1736 128)
+	(bus)
+)
 (junction (pt -424 -352))
 (junction (pt -448 -296))
 (junction (pt 184 448))
@@ -1333,3 +1384,5 @@ agreement for further details.
 (junction (pt 984 104))
 (junction (pt 392 256))
 (junction (pt 1192 352))
+(junction (pt -112 192))
+(junction (pt 1512 192))

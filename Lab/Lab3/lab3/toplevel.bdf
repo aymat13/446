@@ -19,9 +19,9 @@ devices manufactured by Altera and sold by Altera or its
 authorized distributors.  Please refer to the applicable 
 agreement for further details.
 */
-(header "symbol" (version "1.2"))
+(header "graphic" (version "1.4"))
 (symbol
-	(rect 16 16 376 240)
+	(rect 392 136 752 360)
 	(text "datapath" (rect 5 0 80 16)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 206 41 220)(font "Arial" ))
 	(port
