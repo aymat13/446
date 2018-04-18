@@ -24,7 +24,7 @@ agreement for further details.
 	(input)
 	(rect 8 480 232 496)
 	(text "INPUT" (rect 2 5 43 16)(font "Arial" (font_size 6)))
-	(text "ReadData[31..0]" (rect 95 2 219 16)(font "Arial" ))
+	(text "ReadData[31..0]" (rect 95 2 218 16)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 84 4)(pt 59 4))
@@ -74,7 +74,7 @@ agreement for further details.
 	(input)
 	(rect -120 24 48 40)
 	(text "INPUT" (rect 125 0 166 11)(font "Arial" (font_size 6)))
-	(text "reset" (rect 5 0 47 14)(font "Arial" ))
+	(text "reset" (rect 5 0 46 14)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -90,7 +90,7 @@ agreement for further details.
 	(output)
 	(rect 216 -224 232 0)
 	(text "OUTPUT" (rect 0 174 11 223)(font "Arial" (font_size 6))(vertical))
-	(text "WriteData[31..0]" (rect 0 5 14 138)(font "Arial" )(vertical))
+	(text "WriteData[31..0]" (rect 0 5 14 137)(font "Arial" )(vertical))
 	(pt 8 224)
 	(drawing
 		(line (pt 8 224)(pt 8 172))
@@ -107,7 +107,7 @@ agreement for further details.
 	(output)
 	(rect 232 -224 248 0)
 	(text "OUTPUT" (rect 0 174 11 223)(font "Arial" (font_size 6))(vertical))
-	(text "ALUResult[31..0]" (rect 0 5 14 138)(font "Arial" )(vertical))
+	(text "ALUResult[31..0]" (rect 0 5 14 137)(font "Arial" )(vertical))
 	(pt 8 224)
 	(drawing
 		(line (pt 8 224)(pt 8 172))
@@ -124,7 +124,7 @@ agreement for further details.
 	(output)
 	(rect 256 -176 272 0)
 	(text "OUTPUT" (rect 0 126 11 175)(font "Arial" (font_size 6))(vertical))
-	(text "PC[31..0]" (rect 0 5 14 80)(font "Arial" )(vertical))
+	(text "PC[31..0]" (rect 0 5 14 79)(font "Arial" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))

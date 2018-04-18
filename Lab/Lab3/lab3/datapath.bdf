@@ -398,32 +398,6 @@ agreement for further details.
 	(annotation_block (parameter)(rect 152 296 448 344))
 )
 (symbol
-	(rect -328 360 -160 440)
-	(text "constantValueGenerator" (rect 5 0 186 14)(font "Arial" ))
-	(text "const4" (rect 8 64 57 78)(font "Arial" ))
-	(port
-		(pt 168 32)
-		(output)
-		(text "bus_out[W-1..0]" (rect 0 0 123 14)(font "Arial" ))
-		(text "bus_out[W-1..0]" (rect 43 27 166 41)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32)(line_width 3))
-	)
-	(parameter
-		"W"
-		"32"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"C"
-		"4"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 152 64))
-	)
-	(annotation_block (parameter)(rect -160 296 152 359))
-)
-(symbol
 	(rect 760 160 936 336)
 	(text "regfile" (rect 5 0 62 14)(font "Arial" ))
 	(text "RF" (rect 8 160 24 174)(font "Arial" ))
@@ -838,6 +812,32 @@ agreement for further details.
 		(rectangle (rect 16 16 168 96))
 	)
 	(annotation_block (parameter)(rect 688 -16 980 26))
+)
+(symbol
+	(rect -328 360 -160 440)
+	(text "constantValueGenerator" (rect 5 0 186 14)(font "Arial" ))
+	(text "const4" (rect 8 64 57 78)(font "Arial" ))
+	(port
+		(pt 168 32)
+		(output)
+		(text "bus_out[W-1..0]" (rect 0 0 123 14)(font "Arial" ))
+		(text "bus_out[W-1..0]" (rect 43 27 166 41)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(parameter
+		"W"
+		"32"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"C"
+		"4"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 152 64))
+	)
+	(annotation_block (parameter)(rect -160 296 152 359))
 )
 (connector
 	(pt -112 376)

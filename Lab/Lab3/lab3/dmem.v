@@ -4,6 +4,9 @@ module dmem (	input wire clk,we,
 
 		reg [31:0] RAM [63:0];
 		
+		initial begin
+			$readmemh("C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/data.txt",RAM);
+		end
 		assign rd = RAM[a[31:2]];
 		
 		always @(posedge clk) begin

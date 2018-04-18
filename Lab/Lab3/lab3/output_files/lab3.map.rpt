@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3
-Sat Apr 14 17:25:34 2018
+Wed Apr 18 22:28:57 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 14 17:25:34 2018       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 18 22:28:57 2018       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; lab3                                        ;
 ; Top-level Entity Name              ; toplevel                                    ;
@@ -183,6 +183,7 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                    ; Library ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
+; data.txt                         ; yes             ; User File                          ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/data.txt                 ;         ;
 ; program.txt                      ; yes             ; User File                          ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/program.txt              ;         ;
 ; Reg_WE.v                         ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v                 ;         ;
 ; Reg_Simple.v                     ; yes             ; User Verilog HDL File              ; C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v             ;         ;
@@ -989,7 +990,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sat Apr 14 17:25:27 2018
+    Info: Processing started: Wed Apr 18 22:28:50 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3 -c lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1064,6 +1065,7 @@ Warning (10030): Net "RAM.data_a" at imem.v(3) has no driver or initial value, u
 Warning (10030): Net "RAM.waddr_a" at imem.v(3) has no driver or initial value, using a default initial value '0' File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 3
 Warning (10030): Net "RAM.we_a" at imem.v(3) has no driver or initial value, using a default initial value '0' File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v Line: 3
 Info (12128): Elaborating entity "dmem" for hierarchy "dmem:inst2"
+Warning (10850): Verilog HDL warning at dmem.v(8): number of words (0) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v Line: 8
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "arm:inst3|datapath:inst1|regfile:RF|rf" is uninferred due to asynchronous read logic File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v Line: 7
     Info (276007): RAM logic "dmem:inst2|RAM" is uninferred due to asynchronous read logic File: C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v Line: 5
@@ -1081,9 +1083,9 @@ Info (21057): Implemented 7 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 880 megabytes
-    Info: Processing ended: Sat Apr 14 17:25:34 2018
+    Info: Processing ended: Wed Apr 18 22:28:57 2018
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:16
 
