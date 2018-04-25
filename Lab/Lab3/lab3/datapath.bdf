@@ -398,77 +398,6 @@ agreement for further details.
 	(annotation_block (parameter)(rect 152 296 448 344))
 )
 (symbol
-	(rect 760 160 936 336)
-	(text "regfile" (rect 5 0 62 14)(font "Arial" ))
-	(text "RF" (rect 8 160 24 174)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 24 14)(font "Arial" ))
-		(text "clk" (rect 21 27 45 41)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "we3" (rect 0 0 24 14)(font "Arial" ))
-		(text "we3" (rect 21 43 45 57)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "ra1[3..0]" (rect 0 0 74 14)(font "Arial" ))
-		(text "ra1[3..0]" (rect 21 59 95 73)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "ra2[3..0]" (rect 0 0 74 14)(font "Arial" ))
-		(text "ra2[3..0]" (rect 21 75 95 89)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "wa3[3..0]" (rect 0 0 74 14)(font "Arial" ))
-		(text "wa3[3..0]" (rect 21 91 95 105)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "wd3[31..0]" (rect 0 0 82 14)(font "Arial" ))
-		(text "wd3[31..0]" (rect 21 107 103 121)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "r15[31..0]" (rect 0 0 82 14)(font "Arial" ))
-		(text "r15[31..0]" (rect 21 123 103 137)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
-	)
-	(port
-		(pt 176 32)
-		(output)
-		(text "rd1[31..0]" (rect 0 0 82 14)(font "Arial" ))
-		(text "rd1[31..0]" (rect 86 27 168 41)(font "Arial" ))
-		(line (pt 176 32)(pt 160 32)(line_width 3))
-	)
-	(port
-		(pt 176 48)
-		(output)
-		(text "rd2[31..0]" (rect 0 0 82 14)(font "Arial" ))
-		(text "rd2[31..0]" (rect 86 43 168 57)(font "Arial" ))
-		(line (pt 176 48)(pt 160 48)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 160 160))
-	)
-)
-(symbol
 	(rect 712 384 912 464)
 	(text "extend" (rect 5 0 54 14)(font "Arial" ))
 	(text "ex" (rect 8 64 24 78)(font "Arial" ))
@@ -839,6 +768,84 @@ agreement for further details.
 	)
 	(annotation_block (parameter)(rect -160 296 152 359))
 )
+(symbol
+	(rect 760 144 936 320)
+	(text "regfile" (rect 5 0 62 14)(font "Arial" ))
+	(text "RF" (rect 8 160 24 174)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 24 14)(font "Arial" ))
+		(text "clk" (rect 21 27 45 41)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 41 14)(font "Arial" ))
+		(text "reset" (rect 21 43 62 57)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "we3" (rect 0 0 24 14)(font "Arial" ))
+		(text "we3" (rect 21 59 45 73)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "ra1[3..0]" (rect 0 0 74 14)(font "Arial" ))
+		(text "ra1[3..0]" (rect 21 75 95 89)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ra2[3..0]" (rect 0 0 74 14)(font "Arial" ))
+		(text "ra2[3..0]" (rect 21 91 95 105)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "wa3[3..0]" (rect 0 0 74 14)(font "Arial" ))
+		(text "wa3[3..0]" (rect 21 107 95 121)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "wd3[31..0]" (rect 0 0 82 14)(font "Arial" ))
+		(text "wd3[31..0]" (rect 21 123 103 137)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "r15[31..0]" (rect 0 0 82 14)(font "Arial" ))
+		(text "r15[31..0]" (rect 21 139 103 153)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "rd1[31..0]" (rect 0 0 82 14)(font "Arial" ))
+		(text "rd1[31..0]" (rect 86 27 155 41)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(port
+		(pt 176 48)
+		(output)
+		(text "rd2[31..0]" (rect 0 0 82 14)(font "Arial" ))
+		(text "rd2[31..0]" (rect 86 43 155 57)(font "Arial" ))
+		(line (pt 176 48)(pt 160 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 160))
+	)
+)
 (connector
 	(pt -112 376)
 	(pt -32 376)
@@ -882,10 +889,6 @@ agreement for further details.
 (connector
 	(pt -1016 -296)
 	(pt -448 -296)
-)
-(connector
-	(pt -448 -296)
-	(pt 1024 -296)
 )
 (connector
 	(pt -792 184)
@@ -933,11 +936,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 552 288)
-	(pt 760 288)
-	(bus)
-)
-(connector
 	(pt -520 184)
 	(pt -520 224)
 	(bus)
@@ -945,12 +943,6 @@ agreement for further details.
 (connector
 	(pt -112 376)
 	(pt -112 192)
-	(bus)
-)
-(connector
-	(text "Instr[19..16]" (rect 490 208 597 222)(font "Arial" ))
-	(pt 760 224)
-	(pt 392 224)
 	(bus)
 )
 (connector
@@ -968,11 +960,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 392 80)
-	(pt 392 224)
-	(bus)
-)
-(connector
 	(pt 688 64)
 	(pt 704 64)
 	(bus)
@@ -986,26 +973,6 @@ agreement for further details.
 	(pt 632 184)
 	(pt 704 184)
 	(bus)
-)
-(connector
-	(pt 760 192)
-	(pt 744 192)
-)
-(connector
-	(pt 744 -352)
-	(pt 744 192)
-)
-(connector
-	(pt -424 -352)
-	(pt 744 -352)
-)
-(connector
-	(pt 744 -352)
-	(pt 1016 -352)
-)
-(connector
-	(pt 760 208)
-	(pt 728 208)
 )
 (connector
 	(pt 728 208)
@@ -1050,28 +1017,8 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 736 272)
-	(pt 760 272)
-	(bus)
-)
-(connector
-	(pt 960 208)
-	(pt 936 208)
-	(bus)
-)
-(connector
 	(pt 960 256)
 	(pt 968 256)
-	(bus)
-)
-(connector
-	(pt 960 104)
-	(pt 960 208)
-	(bus)
-)
-(connector
-	(pt 960 208)
-	(pt 960 256)
 	(bus)
 )
 (connector
@@ -1170,18 +1117,8 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1040 192)
-	(pt 1040 -24)
-	(bus)
-)
-(connector
 	(pt 984 104)
 	(pt 984 -8)
-	(bus)
-)
-(connector
-	(pt 936 192)
-	(pt 1040 192)
 	(bus)
 )
 (connector
@@ -1236,22 +1173,6 @@ agreement for further details.
 	(text "Instr[15..12]" (rect 402 64 509 78)(font "Arial" ))
 	(pt 392 80)
 	(pt 504 80)
-	(bus)
-)
-(connector
-	(pt 392 224)
-	(pt 392 256)
-	(bus)
-)
-(connector
-	(pt 392 256)
-	(pt 392 416)
-	(bus)
-)
-(connector
-	(text "Instr[15..12]" (rect 402 240 509 254)(font "Arial" ))
-	(pt 392 256)
-	(pt 760 256)
 	(bus)
 )
 (connector
@@ -1313,12 +1234,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "RA2[3..0]" (rect 722 224 796 238)(font "Arial" ))
-	(pt 760 240)
-	(pt 632 240)
-	(bus)
-)
-(connector
 	(text "Result[31..0]" (rect 1842 176 1949 190)(font "Arial" ))
 	(pt 1832 192)
 	(pt 1880 192)
@@ -1370,6 +1285,115 @@ agreement for further details.
 	(pt 1736 128)
 	(bus)
 )
+(connector
+	(pt 1040 176)
+	(pt 936 176)
+	(bus)
+)
+(connector
+	(pt 960 192)
+	(pt 936 192)
+	(bus)
+)
+(connector
+	(pt 744 -352)
+	(pt 744 176)
+)
+(connector
+	(pt 744 176)
+	(pt 760 176)
+)
+(connector
+	(pt 1040 -24)
+	(pt 1040 176)
+	(bus)
+)
+(connector
+	(pt 1040 176)
+	(pt 1040 192)
+	(bus)
+)
+(connector
+	(pt 960 104)
+	(pt 960 192)
+	(bus)
+)
+(connector
+	(pt 960 192)
+	(pt 960 256)
+	(bus)
+)
+(connector
+	(pt -424 -352)
+	(pt 744 -352)
+)
+(connector
+	(pt 744 -352)
+	(pt 1016 -352)
+)
+(connector
+	(pt 760 208)
+	(pt 728 208)
+)
+(connector
+	(text "Instr[19..16]" (rect 490 208 597 222)(font "Arial" ))
+	(pt 760 224)
+	(pt 392 224)
+	(bus)
+)
+(connector
+	(pt 392 80)
+	(pt 392 224)
+	(bus)
+)
+(connector
+	(text "RA2[3..0]" (rect 722 224 796 238)(font "Arial" ))
+	(pt 760 240)
+	(pt 632 240)
+	(bus)
+)
+(connector
+	(text "Instr[15..12]" (rect 402 240 509 254)(font "Arial" ))
+	(pt 760 256)
+	(pt 392 256)
+	(bus)
+)
+(connector
+	(pt 392 224)
+	(pt 392 256)
+	(bus)
+)
+(connector
+	(pt 392 256)
+	(pt 392 416)
+	(bus)
+)
+(connector
+	(pt 760 272)
+	(pt 736 272)
+	(bus)
+)
+(connector
+	(pt 760 288)
+	(pt 552 288)
+	(bus)
+)
+(connector
+	(pt 760 192)
+	(pt 736 192)
+)
+(connector
+	(pt 736 -296)
+	(pt 736 192)
+)
+(connector
+	(pt -448 -296)
+	(pt 736 -296)
+)
+(connector
+	(pt 736 -296)
+	(pt 1024 -296)
+)
 (junction (pt -424 -352))
 (junction (pt -448 -296))
 (junction (pt 184 448))
@@ -1378,11 +1402,12 @@ agreement for further details.
 (junction (pt 392 64))
 (junction (pt 392 80))
 (junction (pt 744 -352))
-(junction (pt 960 208))
 (junction (pt 392 416))
-(junction (pt 1040 192))
 (junction (pt 984 104))
 (junction (pt 392 256))
 (junction (pt 1192 352))
 (junction (pt -112 192))
 (junction (pt 1512 192))
+(junction (pt 1040 176))
+(junction (pt 960 192))
+(junction (pt 736 -296))

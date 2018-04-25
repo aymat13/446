@@ -1,0 +1,289 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/simulation/modelsim
+vadder
+Z1 !s110 1524088392
+!i10b 1
+!s100 FM[OhXBlCM=]OLbBUE5WG2
+IVK8=[V[[BHQQ[4efKGLFg0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1523681591
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v
+L0 1
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1524088392.000000
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3
+vALU
+R1
+!i10b 1
+!s100 l39dUFkg=E0?JTVJXBOl<3
+I;;FFVSK6E0G2V;:P<magj3
+R2
+R0
+w1522090432
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v|
+!i113 1
+R5
+R6
+n@a@l@u
+vconstantValueGenerator
+R1
+!i10b 1
+!s100 M^:zmSEQ[HVjRAXQ<:mce1
+IS4[?_eFcMNMG`4bF6bBha2
+R2
+R0
+w1521994156
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v|
+!i113 1
+R5
+R6
+nconstant@value@generator
+vcontroller
+R1
+!i10b 1
+!s100 OmencW8A>a4CVS[26gIgT1
+I99L^[3ABTO@0;D9T?012?0
+R2
+R0
+w1523712186
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v|
+!i113 1
+R5
+R6
+vdmem
+R1
+!i10b 1
+!s100 GWmic<_zoHV=Z5>@=Lf;i2
+INa6:ESL@Hc]mI<cZfSQ6i3
+R2
+R0
+w1524087032
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v|
+!i113 1
+R5
+R6
+vextend
+R1
+!i10b 1
+!s100 >nV7OQb=5^<Co0o17bV1_2
+IDJkB:6Dg8mO8Ah[izE45G0
+R2
+R0
+w1523684889
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v|
+!i113 1
+R5
+R6
+vimem
+R1
+!i10b 1
+!s100 S>H3lg8PTI4Uf[e9Z5GXX3
+I19TWUl9C0RLW`l>IIG_Mb2
+R2
+R0
+w1524086992
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v|
+!i113 1
+R5
+R6
+vMux2to1
+R1
+!i10b 1
+!s100 cRHTmHS:UT8?XQ=E5JcQH1
+IAU2jhP0AaGmUe;Ec2Gjlb0
+R2
+R0
+w1522107425
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v|
+!i113 1
+R5
+R6
+n@mux2to1
+vMux4to1
+R1
+!i10b 1
+!s100 J=:D1UVWATWTYGnNU>j^f2
+IiMdG=<bD6YFzlkLI_2ac`3
+R2
+R0
+w1522159337
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v|
+!i113 1
+R5
+R6
+n@mux4to1
+vReg_Simple
+R1
+!i10b 1
+!s100 UAlglQB582bl3=6JdZhh43
+IB>Gf_A]N=]>S0EbdW]WZn1
+R2
+R0
+w1522109873
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v|
+!i113 1
+R5
+R6
+n@reg_@simple
+vReg_WE
+R1
+!i10b 1
+!s100 ^n<mI]`?0=N`o]0eRQ]]m2
+I<jJiMCS7KS;cn2JoGN7B?2
+R2
+R0
+w1522091001
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v|
+!i113 1
+R5
+R6
+n@reg_@w@e
+vregfile
+R1
+!i10b 1
+!s100 [o:BXR_=:gN]N9?oSJj0d2
+Ihjk8AN2n?AN5n>fki^RZh1
+R2
+R0
+w1523681448
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v|
+!i113 1
+R5
+R6
+vshifter
+R1
+!i10b 1
+!s100 I4T33DTc>U6Gdzn=n8M@_3
+IOl[X9j8=>emI[:`7UT8bf0
+R2
+R0
+w1523686494
+8C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v
+FC:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3|C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v|
+!i113 1
+R5
+R6

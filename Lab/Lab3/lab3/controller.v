@@ -1,16 +1,16 @@
 module controller(input wire 				clk,reset,
 						input wire [31:12] 	Instr,
 						input wire CO,N,Z,OVF,
-						output wire MemWrite,
-						output reg PCsrc,LR,RegWrite,
-						output wire [1:0] MemtoReg,
+						output wire MemWrite,RegWrite,
+						output reg PCsrc,LR,
+						output reg [1:0] MemtoReg,
 						output wire ALUSrc,RegSrc,
 						output reg [2:0] ALUControl,
 						output wire [3:0] Flags);
 
 	reg NoWrite,FlagWrite;
 	wire RegW,ALUOp;
-	reg [6:0] controls;
+	reg [4:0] controls;
 	wire [5:0] Funct;
 	wire [1:0] Op;
 	wire [3:0] Rd;
@@ -28,16 +28,27 @@ module controller(input wire 				clk,reset,
 	//Main Decoder
 	always @* begin
 		casex(Op)
-			2'b00: controls = 7'b0000101; //DP Instructions. No immidiate, we dont care about func5
-			2'b01: begin
-				if(Funct[0]) controls = 7'bx101100; //LDR Instruction
-				else controls = 7'b11xx010; //STR Instruction
+			2'b00: begin 
+				controls = 5'b00101; //DP Instructions. No immidiate, we dont care about func5
+				MemtoReg = 2'b00;
 			end
-			default: controls = 7'bx;
+			2'b01: begin
+				if(Funct[0]) begin
+					controls = 5'bx1100; //LDR Instruction
+					NoWrite=0;
+					MemtoReg = 2'b01;
+				end
+				else begin 
+					controls = 5'b11010; //STR Instruction
+					NoWrite=0;
+					MemtoReg = 2'b01;
+				end
+			end
+			default: controls = 5'bx;
 		endcase
 	end
 	
-	assign {RegSrc,ALUSrc,MemtoReg,RegW,MemWrite,ALUOp} = controls;
+	assign {RegSrc,ALUSrc,RegW,MemWrite,ALUOp} = controls;
 	
 	//ALU Decoder
 	always @* begin
@@ -73,24 +84,24 @@ module controller(input wire 				clk,reset,
 					LR = 0; //LSL
 					NoWrite = 0;
 					FlagWrite = 0;
+					MemtoReg = 2'b10;
 				end
 				4'b1000: begin
 					ALUControl = 3'b000;
 					LR = 1; //LSR
 					NoWrite = 0;
 					FlagWrite = 0;
+					MemtoReg = 2'b10;
 				end
 				default: ALUControl = 3'bx;
 			endcase
-			
-			RegWrite = RegW & (~NoWrite);
 		end
 		else begin
 			ALUControl = 3'b000; //Non DP Instuctions
 			FlagWrite=0; // Don't Update Flags
 		end
 	end
-	
+assign 	RegWrite = RegW & (~NoWrite);
 	//PC Logic
 	always @* begin
 		PCsrc = (Rd == 4'b1111) & RegW;

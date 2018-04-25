@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition"
-// CREATED		"Wed Apr 18 22:29:59 2018"
+// CREATED		"Thu Apr 19 23:20:59 2018"
 
 module datapath(
 	PCsrc,
@@ -159,6 +159,7 @@ Mux4to1	b2v_resultmux(
 
 regfile	b2v_RF(
 	.clk(clk),
+	.reset(reset),
 	.we3(RegWrite),
 	.r15(PCPlus8),
 	.ra1(Instr[19:16]),

@@ -1,0 +1,143 @@
+# Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do lab3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_WE.v 
+# -- Compiling module Reg_WE
+# 
+# Top level modules:
+# 	Reg_WE
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Reg_Simple.v 
+# -- Compiling module Reg_Simple
+# 
+# Top level modules:
+# 	Reg_Simple
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux4to1.v 
+# -- Compiling module Mux4to1
+# 
+# Top level modules:
+# 	Mux4to1
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/Mux2to1.v 
+# -- Compiling module Mux2to1
+# 
+# Top level modules:
+# 	Mux2to1
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/constantValueGenerator.v 
+# -- Compiling module constantValueGenerator
+# 
+# Top level modules:
+# 	constantValueGenerator
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/regfile.v 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/adder.v 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/extend.v 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/shifter.v 
+# -- Compiling module shifter
+# 
+# Top level modules:
+# 	shifter
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/controller.v 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/dmem.v 
+# -- Compiling module dmem
+# 
+# Top level modules:
+# 	dmem
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3 {C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:53:12 on Apr 19,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3" C:/Users/AhmetSalih/Documents/GitHub/446/Lab/Lab3/lab3/imem.v 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 00:53:12 on Apr 19,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
