@@ -1,5 +1,5 @@
 module ALU
-	#(parameter W = 8) (SrcA, SrcB, Control, Result, CO, OVF, N, Z);
+	#(parameter W = 5) (SrcA, SrcB, Control, Result, CO, OVF, N, Z);
 	
 	//W-bit Inputs
 	input wire [W-1:0] SrcA, SrcB;

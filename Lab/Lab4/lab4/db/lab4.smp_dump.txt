@@ -1,0 +1,11 @@
+
+State Machine - |toplevel|processor:inst|controller:inst1|state
+Name state.SHIFT state.EXECR state.LDR_imm state.LDR_reg1 state.LDR_reg0 state.STR state.DECODE state.FETCH 
+state.FETCH 0 0 0 0 0 0 0 0 
+state.DECODE 0 0 0 0 0 0 1 1 
+state.STR 0 0 0 0 0 1 0 1 
+state.LDR_reg0 0 0 0 0 1 0 0 1 
+state.LDR_reg1 0 0 0 1 0 0 0 1 
+state.LDR_imm 0 0 1 0 0 0 0 1 
+state.EXECR 0 1 0 0 0 0 0 1 
+state.SHIFT 1 0 0 0 0 0 0 1 

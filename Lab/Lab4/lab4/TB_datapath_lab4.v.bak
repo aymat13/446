@@ -1,0 +1,22 @@
+module TB_datapath_lab4 begin();
+	input wire	PCWrite;
+input wire	clk;
+input wire	IRWrite;
+input wire	LRWrite;
+input wire	reset;
+input wire	AddrSrc;
+input wire	RegWrite;
+input wire	ALUSrcA;
+input wire	[2:0] ALUControl;
+input wire	[1:0] ALUSrcB;
+input wire	[1:0] PCSrc;
+input wire	[15:0] ReadData;
+input wire	[1:0] RegSrc;
+input wire	[1:0] ResultSrc;
+input wire	[2:0] sh;
+output wire	[7:0] addr;
+output wire	[3:0] Flags;
+output wire	[15:0] Instr;
+output wire	[7:0] LR_data;
+output wire	[7:0] write_data;
+endmodule
