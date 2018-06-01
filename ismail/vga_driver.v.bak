@@ -1,0 +1,89 @@
+module vga_driver (clk,hs,vs,r,g,b)
+input wire clk; //50MHz input clock
+output reg hs,vs,r,g,b; //Outputs
+
+
+reg clk_V = 0;
+reg [9:0] counter_clk = 0;
+reg [9:0] counter_V = 0;
+reg [9:0] counter_H = 0;
+reg v_sync_ready = 0;
+reg h_sync_ready = 0;
+
+//clk is assumed to be 25Mhz
+//We need a 25MHz clock for horizontal sync signals
+//and 1/32MHz clock for vertical sync signals
+//clk_H ticks 400 times before clk_V changes its value.
+//clk_H is directly used as clk.
+
+reg [7:0] ram_R [307199:0];
+reg [7:0] ram_G [307199:0];
+reg [7:0] ram_B [307199:0];
+
+initial begin
+	hs = 1'b1;
+	vs = 1'b1;
+	$readmemh("hex_R.txt", ram_R);
+	$readmemh("hex_G.txt", ram_G);
+	$readmemh("hex_B.txt", ram_B);
+end
+
+
+always @(posedge clk) begin //clk_V Generator Process
+	if(counter_clk == 800) begin
+		clk_V = clk_V ^ 1'b1; //clk_V changes its value
+		counter_clk = 0; //Reset counter_clk
+	end
+	counter_clk = counter_clk + 1;
+end
+
+always @(posedge clk_V) begin //Vertical Sync Signal Process
+	if(counter_V < 2) begin //V-sync signal begins
+		vs = 0;
+	end
+	else if(counter_V == 2) begin  //End of v-sync
+		vs = 1;
+	end 
+	else if(counter_V == 35) begin //Back Porch(V)
+		v_sync_ready = 1;
+	end
+	else if(counter_V == 515) begin //Video Signal(One Frame)
+		v_sync_ready = 0;
+	end
+	else if(counter_V > 524) begin //Front Porch(V)
+		vs = 1;
+		counter_V = 600; //Stop counter from incrementing and overflowing.
+	end
+	counter_V = counter_V + 1;	
+end
+
+always @(posedge clk, v_sync_ready) begin //Horizontal Sync Signal Process
+	if(v_sync_ready) begin
+		if(counter_H<96) begin //H-sync
+			hs = 0;
+		end
+		else if(counter_H == 96) begin //End of h-sync
+			hs = 1;
+		end
+		else if(counter_H == 144) begin //Back Porch(H)
+			h_sync_ready = 1;
+		end
+		else if(counter_H == 784) begin //Video Signal(One Line)
+			h_sync_ready = 0;
+		end
+		else if(counter_H == 800) begin //Front Porch(H)
+			counter_H = 0;
+		end
+		
+		if(counter_H < 800)
+			counter_H = counter_H + 1;
+	end 
+	else begin
+		h_sync_ready = 0;
+	end
+end
+
+always @(posedge clk, h_sync_ready) begin //RGB Transmission Process
+
+end
+endmodule

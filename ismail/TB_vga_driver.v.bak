@@ -1,0 +1,22 @@
+module TB_vga_driver ();
+
+	wire r,g,b,hs,vs;
+	reg clk_50;
+	
+vga_driver DUT (clk_50,hs,vs,r,g,b);
+
+initial begin
+
+	clk_50 = 0;
+	
+end
+
+integer j;
+
+always @* begin
+	for(j=0;j<1000;j++) begin
+		clk_50 = clk_50 ^ 1'b1;
+	end
+end
+
+endmodule
