@@ -14,9 +14,7 @@ end
 integer j;
 
 always @* begin
-	for(j=0;j<1000;j++) begin
-		clk_50 = clk_50 ^ 1'b1;
-	end
+	clk_50 = 0; #5; clk_50 = 1; #5;
 end
 
 endmodule

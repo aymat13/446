@@ -1,7 +1,8 @@
 module vga_driver (clk_50,hs,vs,r,g,b);
 
 input wire clk_50; //50MHz input clock
-output reg hs,vs,r,g,b; //Outputs
+output reg hs,vs;
+output reg [7:0] r,g,b; //Outputs
 
 
 reg clk_v = 0;
@@ -21,9 +22,7 @@ reg [7:0] temp_reg;
 //clk_H ticks 400 times before clk_V changes its value.
 //clk_H is directly used as clk.
 
-reg [7:0] ram_R [307199:0];
-reg [7:0] ram_G [307199:0];
-reg [7:0] ram_B [307199:0];
+reg [7:0] ram [307199:0];
 
 initial begin
 	r = 0;
@@ -31,9 +30,7 @@ initial begin
 	b = 0;
 	hs = 1'b1;
 	vs = 1'b1;
-	$readmemh("C:/Users/aymat/Documents/GitHub/446/ismail/hex_R.txt", ram_R);
-	$readmemh("C:/Users/aymat/Documents/GitHub/446/ismail/hex_G.txt", ram_G);
-	$readmemh("C:/Users/aymat/Documents/GitHub/446/ismail/hex_B.txt", ram_B);
+	$readmemh("C:/Users/aymat/Documents/GitHub/446/ismail/hex.txt", ram);
 end
 
 always @(posedge clk_50) begin
@@ -68,7 +65,7 @@ always @(posedge clk_v) begin //Vertical Sync Signal Process
 	counter_v = counter_v + 1;	
 end
 
-always @(posedge clk, v_sync_ready) begin //Horizontal Sync Signal Process
+always @(posedge clk) begin //Horizontal Sync Signal Process
 	if(v_sync_ready) begin
 		if(counter_H<96) begin //H-sync
 			hs = 0;
@@ -94,18 +91,12 @@ always @(posedge clk, v_sync_ready) begin //Horizontal Sync Signal Process
 	end
 end
 
-always @(posedge clk, h_sync_ready) begin //RGB Transmission Process
+always @(posedge clk) begin //RGB Transmission Process
 	if(h_sync_ready) begin
-		temp_reg = ram_R[count_ram];
-		if(temp_reg>128) r = 1;
-		else r = 0;
-		temp_reg = ram_G[count_ram];
-		if(temp_reg>128) g = 1;
-		else g = 0;
-		temp_reg = ram_B[count_ram];
-		if(temp_reg>128) b = 1;
-		else b = 0;
-		
+		temp_reg = ram[count_ram];
+		r = temp_reg;
+		g = temp_reg;
+		b = temp_reg;
 		count_ram = count_ram + 1;
 		
 	end

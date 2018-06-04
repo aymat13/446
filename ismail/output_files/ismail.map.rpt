@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ismail
-Fri Jun 01 13:03:05 2018
+Fri Jun 01 19:05:05 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -10,7 +10,14 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +41,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Jun 01 13:03:05 2018           ;
-; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
-; Revision Name               ; ismail                                      ;
-; Top-level Entity Name       ; vga_driver                                  ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jun 01 19:05:04 2018       ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                   ; ismail                                      ;
+; Top-level Entity Name           ; vga_driver                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 78                                          ;
+; Total pins                      ; 27                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -149,11 +161,125 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+; vga_driver.v                     ; yes             ; User Verilog HDL File  ; C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v ;         ;
+; hex.txt                          ; yes             ; Auto-Found File        ; C:/Users/aymat/Documents/GitHub/446/ismail/hex.txt      ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 36353        ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 37837        ;
+;     -- 7 input functions                    ; 7891         ;
+;     -- 6 input functions                    ; 26970        ;
+;     -- 5 input functions                    ; 1224         ;
+;     -- 4 input functions                    ; 1100         ;
+;     -- <=3 input functions                  ; 652          ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 78           ;
+;                                             ;              ;
+; I/O pins                                    ; 27           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; count_ram[0] ;
+; Maximum fan-out                             ; 22760        ;
+; Total fan-out                               ; 229589       ;
+; Average fan-out                             ; 6.05         ;
++---------------------------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |vga_driver                ; 37837 (37837)     ; 78 (78)      ; 0                 ; 0          ; 27   ; 0            ; |vga_driver         ; vga_driver  ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 78    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 46    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; hs~reg0                                ; 2       ;
+; vs~reg0                                ; 2       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 78                          ;
+;     ENA               ; 46                          ;
+;     plain             ; 32                          ;
+; arriav_lcell_comb     ; 37839                       ;
+;     arith             ; 45                          ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 8                           ;
+;         4 data inputs ; 8                           ;
+;     extend            ; 7891                        ;
+;         7 data inputs ; 7891                        ;
+;     normal            ; 29903                       ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 160                         ;
+;         3 data inputs ; 452                         ;
+;         4 data inputs ; 1092                        ;
+;         5 data inputs ; 1224                        ;
+;         6 data inputs ; 26970                       ;
+; boundary_port         ; 27                          ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 7.17                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:41:52     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,16 +288,32 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Fri Jun 01 13:02:52 2018
+    Info: Processing started: Fri Jun 01 17:58:52 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ismail -c ismail
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10170): Verilog HDL syntax error at vga_driver.v(2) near text: "input";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 2
-Info (12021): Found 0 design units, including 0 entities, in source file vga_driver.v
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 5001 megabytes
-    Error: Processing ended: Fri Jun 01 13:03:05 2018
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:33
+Info (12021): Found 1 design units, including 1 entities, in source file vga_driver.v
+    Info (12023): Found entity 1: vga_driver File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 1
+Info (12127): Elaborating entity "vga_driver" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at vga_driver.v(45): truncated value with size 32 to match size of target (10) File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 45
+Warning (10230): Verilog HDL assignment warning at vga_driver.v(65): truncated value with size 32 to match size of target (10) File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 65
+Warning (10230): Verilog HDL assignment warning at vga_driver.v(87): truncated value with size 32 to match size of target (10) File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 87
+Warning (10230): Verilog HDL assignment warning at vga_driver.v(100): truncated value with size 32 to match size of target (18) File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 100
+Warning (10030): Net "ram.data_a" at vga_driver.v(25) has no driver or initial value, using a default initial value '0' File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 25
+Warning (10030): Net "ram.waddr_a" at vga_driver.v(25) has no driver or initial value, using a default initial value '0' File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 25
+Warning (10030): Net "ram.we_a" at vga_driver.v(25) has no driver or initial value, using a default initial value '0' File: C:/Users/aymat/Documents/GitHub/446/ismail/vga_driver.v Line: 25
+Critical Warning (127005): Memory depth (524288) in the design file differs from memory depth (307200) in the Memory Initialization File "C:/Users/aymat/Documents/GitHub/446/ismail/db/ismail.ram0_vga_driver_1d939d27.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 37889 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 37862 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 5612 megabytes
+    Info: Processing ended: Fri Jun 01 19:05:05 2018
+    Info: Elapsed time: 01:06:13
+    Info: Total CPU time (on all processors): 01:06:08
 
 

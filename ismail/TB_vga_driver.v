@@ -13,8 +13,8 @@ end
 
 integer j;
 
-always @* begin
-	clk_50 = 0; #5; clk_50 = 1; #5;
+always @(negedge clk_50) begin
+	clk_50 = 1; #5; clk_50 = 0; #5;
 end
 
 endmodule
